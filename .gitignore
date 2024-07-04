@@ -1,0 +1,7 @@
+.idea/
+node_modules/
+content/.vitepress/cache/
+content/.vitepress/dist/
+npm-debug.log
+yarn-error.log
+
