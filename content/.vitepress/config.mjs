@@ -11,7 +11,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Guides', link: '/guides/get-started' },
       { text: 'phpDoc', link: 'https://phpdoc.nostr-php.dev' },
-      { text: 'Fork me', link: 'https://github.com/nostrver-se/nostr-php/fork' }
+      { text: 'Fork me', link: 'https://github.com/nostrver-se/nostr-php.dev/fork' }
     ],
 
     sidebar: [
@@ -31,7 +31,7 @@ export default defineConfig({
     ],
 
     editLink: {
-      pattern: 'https://github.com/nostrver-se/nostr-php/tree/main/website/content/:path'
+      pattern: 'https://github.com/nostrver-se/nostr-php.dev/tree/main/website/content/:path'
     }
   },
   cleanUrls: true
