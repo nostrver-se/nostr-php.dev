@@ -22,14 +22,15 @@ hero:
     
 
 features:
-  - title: Publish events
+  - title: Publish event
     details: Create, sign and publish Nostr events to relays.
-    link: /guides/publish-events
+    link: /guides/publish-event
   - title: Read events
     details: Request Nostr events from relays.
     link: /guides/read-events
   - title: Examples
     details: Learn how to use this PHP helper library for Nostr.  
+    link: /examples
 ---
 
 ## Get started
@@ -47,11 +48,11 @@ Here is an example how to create and publish an event to a relay:
 
 require __DIR__ . '/vendor/autoload.php';
 
-use nostrverse\nostr\Event\Event;
-use nostrverse\nostr\Key\Key;
-use nostrverse\nostr\Message\EventMessage;
-use nostrverse\nostr\Relay\Relay;
-use nostrverse\nostr\Sign\Sign;
+use swentel\nostr\Event\Event;
+use swentel\nostr\Key\Key;
+use swentel\nostr\Message\EventMessage;
+use swentel\nostr\Relay\Relay;
+use swentel\nostr\Sign\Sign;
 
 function send($message) {  
   try {        

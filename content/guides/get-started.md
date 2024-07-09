@@ -8,7 +8,7 @@ title: Get started with Nostr-PHP
 
 ## Prerequisites
 * PHP 8.1 or higher
-* Composer
+* [Composer](https://getcomposer.org/)
 
 ## Installation
 
