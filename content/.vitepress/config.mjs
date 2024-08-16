@@ -37,7 +37,7 @@ export default defineConfig({
           { text: 'Manage content on events' },
           { text: 'Relays' },
           { text: 'Relay messages' },
-          { text: 'Relay responses' }
+          { text: 'Relay responses', link: '/guides/relay-responses' }
         ]
       },
       {

@@ -1,13 +1,14 @@
 ---
-Title: References using Nostr-PHP
+Title: References
 ---
 
-# References
+# References using Nostr-PHP
 
-PHP projects using nostr-php:
+PHP projects using the nostr-php library:
 * https://github.com/pj8912/nostrdev
 * https://github.com/fabianfabian/nostr-media (is using a fork for PHP8.0 compatibility)
 * https://github.com/OpenAgentsInc/openagents
 
+## Other Nostr libraries
 
-### [Comparisation matrix with Nostr libraries](/references/compare-nostr-libraries)
+Check out this page with a [comparisation matrix with Nostr libraries](/references/compare-nostr-libraries)
