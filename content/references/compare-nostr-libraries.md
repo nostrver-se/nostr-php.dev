@@ -36,6 +36,7 @@ List with other helper libraries in different languages for Nostr:
 * https://github.com/dtonon/nostr-ruby
 * https://github.com/penpenpng/rx-nostr
 * https://github.com/nostr-sdk/nostr-sdk-ios
+* https://gitlab.com/soapbox-pub/nostrify
 
 ### Used resources
 

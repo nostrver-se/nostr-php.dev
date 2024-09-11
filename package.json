@@ -25,5 +25,8 @@
   "description": "A website for a PHP helper library for Nostr",
   "devDependencies": {
     "vitepress": "^1.2.3"
+  },
+  "dependencies": {
+    "@datagouv/vitepress-plugin-matomo": "^1.0.5"
   }
 }
