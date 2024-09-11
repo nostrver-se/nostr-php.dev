@@ -7,7 +7,7 @@ hero:
   text: "A PHP helper library for Nostr"
   tagline: Empower your 🐘 PHP project with Nostr.
   image:
-    src: /assets/nostr-php_hero-splash.png
+    src: /nostr-php_hero-splash.png
     alt: Nostr-PHP
   actions:
     - theme: brand

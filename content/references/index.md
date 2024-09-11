@@ -8,7 +8,7 @@ PHP projects using the nostr-php library:
 * https://github.com/pj8912/nostrdev
 * https://github.com/fabianfabian/nostr-media (is using a fork for PHP8.0 compatibility)
 * https://github.com/OpenAgentsInc/openagents
-* https://github.com/ShadowySuperStacker/craft-nostr-kit
+* https://plugins.craftcms.com/nostr-kit
 
 ## Other Nostr libraries
 

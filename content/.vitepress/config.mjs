@@ -4,9 +4,14 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Nostr-PHP",
   description: "A PHP helper library for Nostr",
+  base: '/',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
+  assetsDir: 'assets',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/assets/nostr-php_hero-splash.png',
+    logo: '/nostr-php_hero-splash.png',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guides', link: '/guides/get-started' },
