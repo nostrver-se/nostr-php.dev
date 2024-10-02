@@ -4,7 +4,7 @@ Title: Compare Nostr helper libraries
 
 # Comparing Nostr libraries
 
-// TODO
+@todo
 
 | Library            | [go-nostr](https://github.com/nbd-wtf/go-nostr) | [python-nostr](https://github.com/jeffthibault/python-nostr) | [nostr-flutter](https://pub.dev/documentation/nostr/latest/nostr/nostr-library.html) | nostr-php | [NDK](https://ndk.fyi/docs/) | [nostr-rust](https://rust-nostr.org/) |
 |--------------------|-------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------|------------------------------|---------------------------------------|

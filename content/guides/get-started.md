@@ -6,6 +6,8 @@ title: Get started with Nostr-PHP
 
 ## Try it out online
 
+@todo
+
 ## Prerequisites
 * PHP 8.1 or higher
 * [Composer](https://getcomposer.org/)

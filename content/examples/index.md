@@ -2,7 +2,7 @@
 Title: Examples
 ---
 
-// TODO
+@todo
 
 * [Symfony](/examples/symfony)
 * [Laravel](/examples/laravel)
