@@ -13,3 +13,9 @@ PHP projects using the nostr-php library:
 ## Other Nostr libraries
 
 Check out this page with a [comparisation matrix with Nostr libraries](/references/compare-nostr-libraries)
+
+## Research
+
+Here are some resources around different topics we've researched for integrating specific features in the library.
+
+* [Execute async concurrent requests](/references/async-concurrent-requests)
