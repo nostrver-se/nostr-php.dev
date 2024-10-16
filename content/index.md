@@ -27,7 +27,7 @@ features:
     link: /guides/publish-event
   - title: Request events
     details: Request Nostr events from relays.
-    link: /guides/read-events
+    link: /guides/request-events
   - title: Examples
     details: Learn how to use this PHP helper library for Nostr.  
     link: /examples
