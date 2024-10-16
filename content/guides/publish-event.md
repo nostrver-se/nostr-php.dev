@@ -1,6 +1,6 @@
 # Publish event
 
-Let's say we would like to broadcast a simple note to some Nostr relays.
+Let's say we would like to transmit a simple note to a single Nostr relay.
 
 ## Create event
 
@@ -18,7 +18,7 @@ Kind number `1` is the most used and famous one for Nostr. There are many other 
 ## Add tags
 
 ```php
-$note->addTag(['t', 'introductions']); // This is a generic hashtag.
+$note->addTag(['t', 'introduction']); // This is a generic hashtag.
 $note->addTag(['r', 'wss://relay.nostr.band']); // This is a relay hint tag.
 ```
 
@@ -37,20 +37,22 @@ To sign the event, you will need a private key. In the example below a new gener
 
 ```php
 $private_key = new Key(); 
-$private_key->generatePrivateKey();
+$private_key = = $private_key->generatePrivateKey();
 $signer = new Sign();
 $signer->signEvent($note, $private_key);
 ```
 
 ## Verify
 
+This will return a boolean.
+
 ```php
-$note->verify();
+$isValid = $note->verify();
 ```
 
-## Broadcast a message with the event to a relay
+## Transmit a message with the event to a single relay
 
-We now should have a note event which is ready to be broadcasted to a relay.
+We now should have a note event which is ready to be transmitted to one relay.
 We will use the `EventMessage` to generate a message to be sent to the relay.
 
 ```php
@@ -62,8 +64,42 @@ $response = $relay->send();
 
 ## Relay response
 
-```php
+When the message has been sent to the relay, it will return a RelayResponse object.
 
+```php
+if ($response->isSuccess) {
+    print 'The event has been transmitted to the relay.' . PHP_EOL;
+    $eventId = $response->eventId;
+}
 ```
 
 ## Full snippet
+
+```php
+// Compose event.
+$note = new Event();
+$note->setKind(1);
+$note->addTag(['t', 'introduction']);
+$note->addTag(['r', 'wss://relay.nostr.band']); 
+$content = 'Hello Nostr world!';
+$note->setContent($content);
+// Sign event.
+$private_key = new Key(); 
+$private_key = $private_key->generatePrivateKey();
+$signer = new Sign();
+$signer->signEvent($note, $private_key);
+// Optional, verify event.
+$isValid = $note->verify();
+// Transmit the event to a relay.
+$relay = new Relay('wss://relay.nostr.band');
+$eventMessage = new EventMessage($note);
+$relay->setMessage($eventMessage);      
+$response = $relay->send();
+// Handle response.
+if ($response->isSuccess) {
+    print 'The event has been transmitted to the relay.' . PHP_EOL;
+    $eventId = $response->eventId;
+    // Now we could request the event with this id.
+}
+```
+This snippet can also be found as an example in the library here: [`src/Examples/publish-event.php`](https://github.com/nostrver-se/nostr-php/blob/main/src/Examples/publish-event.php).

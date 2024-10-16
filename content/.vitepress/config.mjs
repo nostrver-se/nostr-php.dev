@@ -23,26 +23,26 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'What is Nostr-PHP?',
+        text: 'Introduction',
+        link: '/introduction'
       },
       {
         text: 'CLI client',
+        link: '/cli-client'
       },
       {
         text: 'Guides',
         items: [
           { text: 'Get started', link: '/guides/get-started' },
           { text: 'Generate keys', link: '/guides/generate-keys' },
-          { text: 'Event kinds' },
+          { text: 'Messages to relays', link: '/guides/messages-to-relays' },
+          { text: 'Request events', link: '/guides/request-events' },
           { text: 'Publish an event', link: '/guides/publish-event' },
-          { text: 'Read events', link: '/guides/read-events' },
-          { text: 'Sign event', link: '/guides/sign-event' },
+          { text: 'Relay responses', link: '/guides/relay-responses' },
           { text: 'Verify event', link: '/guides/verify-event' },
           { text: 'Manage tags on events' },
           { text: 'Manage content on events' },
-          { text: 'Relays' },
-          { text: 'Relay messages' },
-          { text: 'Relay responses', link: '/guides/relay-responses' }
+          { text: 'Asynchronous and concurrent requests', link: '/guides/asynchronous-and-concurrent-requests' }
         ]
       },
       {

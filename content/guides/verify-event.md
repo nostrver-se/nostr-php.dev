@@ -11,3 +11,5 @@ $event = new Event();
 // Use the verify method and get a TRUE of FALSE returned.
 $isValid = $event->verify($json);
 ```
+
+This snippet can also be found as an example in the library here: [`src/Examples/verify.php`](https://github.com/nostrver-se/nostr-php/blob/main/src/Examples/verify.php).

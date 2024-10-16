@@ -59,3 +59,4 @@ Solutions found:
 - https://ascend-agency.medium.com/async-or-swim-evolution-asynchronous-php-non-blocking-code-execution-c75b285b2bbb
 - https://www.drupal.org/project/drupal/issues/3257726
 - https://mglaman.dev/blog/can-we-use-concurrency-speed-streamed-bigpipe-responses-drupal
+- https://gorannikolovski.com/blog/asynchronous-and-concurrent-http-requests-in-php

@@ -25,7 +25,7 @@ features:
   - title: Publish event
     details: Create, sign and publish Nostr events to relays.
     link: /guides/publish-event
-  - title: Read events
+  - title: Request events
     details: Request Nostr events from relays.
     link: /guides/read-events
   - title: Examples
