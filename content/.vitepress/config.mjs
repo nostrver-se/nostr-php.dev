@@ -40,8 +40,7 @@ export default defineConfig({
           { text: 'Publish an event', link: '/guides/publish-event' },
           { text: 'Relay responses', link: '/guides/relay-responses' },
           { text: 'Verify event', link: '/guides/verify-event' },
-          { text: 'Manage tags on events' },
-          { text: 'Manage content on events' },
+          { text: 'Manage tags on events', link: 'guides/manage-tags-on-an-event' },
           { text: 'Asynchronous and concurrent requests', link: '/guides/asynchronous-and-concurrent-requests' }
         ]
       },
@@ -52,7 +51,10 @@ export default defineConfig({
         text: 'References', link: '/references/index'
       },
       {
-        text: 'Contribute'
+        text: 'Contribute', link: '/contribute'
+      },
+      {
+        text: 'Chat', link: '/chat'
       },
       {
         text: 'Changelog', link: 'changelog'

@@ -22,7 +22,8 @@ $note->addTag(['t', 'introduction']); // This is a generic hashtag.
 $note->addTag(['r', 'wss://relay.nostr.band']); // This is a relay hint tag.
 ```
 
-There are many tags you can use and it also depends on the event kind how these tags should be handled by clients.
+There are many tags you can use, and it also depends on the event kind how these tags should be handled by clients.
+Find out more in the [Manage tags on an event](/guides/manage-tags-on-an-event) guide.
 
 ## Set content
 
