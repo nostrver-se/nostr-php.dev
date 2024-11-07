@@ -17,8 +17,12 @@ At the end of 2023 Sebastix applied for a OpenSats grant for further development
 
 ## Learn more about websockets
 
-If you're curious how Websocket works, I recommended to watch this video:
+If you're curious how WebSockets works, I recommended to watch this video:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2Nt-ZrNP22A?si=l0DUpejXKrB0E21P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This video is part of https://www.classcentral.com/course/youtube-websockets-crash-course-handshake-use-cases-pros-cons-and-more-139394
+
+More in-depth resources on WebSocket:
+
+* https://levelup.gitconnected.com/websockets-demystified-part-1-understanding-the-protocol-fccca2ca75eb

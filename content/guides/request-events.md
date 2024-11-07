@@ -14,6 +14,7 @@ $subscriptionId = $subscription->setId();
 We will use the `RequestMessage` to generate a message to be sent to the relay.
 
 ```php
+$filter1 = new Filter();
 $filter1->setKinds([1]); // Only fetch kind 1 events.
 $filter1->setLimit(25); // Will return max 25 events.
 $filters = [$filter1];
