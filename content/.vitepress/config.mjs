@@ -37,6 +37,7 @@ export default defineConfig({
           { text: 'Generate keys', link: '/guides/generate-keys' },
           { text: 'Messages to relays', link: '/guides/messages-to-relays' },
           { text: 'Request events', link: '/guides/request-events' },
+          { text: 'Filters and tags on request events', link: '/guides/filters-and-tags-on-request-events' },
           { text: 'Publish an event', link: '/guides/publish-event' },
           { text: 'Relay responses', link: '/guides/relay-responses' },
           { text: 'Verify event', link: '/guides/verify-event' },

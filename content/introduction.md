@@ -7,7 +7,7 @@
 Back in february 2023 the initial development of the Nostr-PHP library was done by Swentel while he was working on a Drupal module to easily (cross)post a note ([Nostr Simple Publish](https://www.drupal.org/project/nostr_simple_publish)).
 When he started to work on this module he quickly learned that it would make sense do use a PHP helper library to execute all the Nostr generic things in the code. 
 As there was no library yet, he started to build one (see the initial commit [here](https://github.com/nostrver-se/nostr-php/commit/9ce143e4d8e63ef955b32d66ad0f0530c01c2794)) to include it in the module (see this [commit](https://git.drupalcode.org/project/nostr_simple_publish/-/commit/cbdb3b50dc7b08a1ee4c033ff04de717c7897f75)). 
-In that same period also Sebastix was developing a Drupal module to integrate NIP-05 ([Nostr NIP05](https://www.drupal.org/project/nostr_id_nip05)) and started to use the library as well.
+In that same period also Sebastix was developing a Drupal module to integrate NIP-05 ([Nostr NIP-05](https://www.drupal.org/project/nostr_id_nip05)) and started to use the library as well.
 He used the Nostr Simple Publish module to create a new module for crossposting long form content ([Nostr long-form content NIP-23](https://www.drupal.org/project/nostr_content_nip23)).
 
 In June 2023 Swentel was unable to keep working on the library as well on the Nostr Simple Publish Drupal module (see this [issue](https://github.com/nostrver-se/nostr-php/commit/9ce143e4d8e63ef955b32d66ad0f0530c01c2794)). He reached out with the question seeking for other co-maintainers.
@@ -26,3 +26,4 @@ This video is part of https://www.classcentral.com/course/youtube-websockets-cra
 More in-depth resources on WebSocket:
 
 * https://levelup.gitconnected.com/websockets-demystified-part-1-understanding-the-protocol-fccca2ca75eb
+* https://www.researchgate.net/publication/348993267_An_Analysis_of_the_Performance_of_Websockets_in_Various_Programming_Languages_and_Libraries 

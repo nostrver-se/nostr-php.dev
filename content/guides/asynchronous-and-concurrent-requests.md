@@ -137,8 +137,7 @@ try {
  */
 function populateRequestMessage(): RequestMessage
 {
-    $subscription = new Subscription();
-    $subscriptionId = $subscription->setId();
+    $subscription = new Subscription();    
     $filter1 = new Filter();
     $filter1->setAuthors(
         [
@@ -148,7 +147,7 @@ function populateRequestMessage(): RequestMessage
     $filter1->setKinds([1, 30023]);
     $filter1->setLimit(250);
     $filters = [$filter1];
-    return new RequestMessage($subscriptionId, $filters);
+    return new RequestMessage($subscription->getId(), $filters);
 }
 ```
 

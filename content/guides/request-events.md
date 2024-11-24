@@ -6,7 +6,6 @@ Requesting data (Nostr events) from a relay is quite simple.
 
 ```php
 $subscription = new Subscription();
-$subscriptionId = $subscription->setId();
 ```
 
 ## Create a filter and compose the request message
@@ -18,8 +17,10 @@ $filter1 = new Filter();
 $filter1->setKinds([1]); // Only fetch kind 1 events.
 $filter1->setLimit(25); // Will return max 25 events.
 $filters = [$filter1];
-$requestMessage = new RequestMessage($subscriptionId, $filters);
+$requestMessage = new RequestMessage($subscription->getId(), $filters);
 ```
+
+The provided filter in this example is very basic. More advanced use of filters is explained [here](/guides/filters-and-tags-on-request-events).
 
 ## Send the request message to the relay
 
@@ -55,13 +56,12 @@ foreach ($response as $relayUrl => $relayResponses) {
 
 ```php
 $subscription = new Subscription();
-$subscriptionId = $subscription->setId();
 
 $filter1 = new Filter();
 $filter1->setKinds([1]);
 $filter1->setLimit(25);
 $filters = [$filter1];
-$requestMessage = new RequestMessage($subscriptionId, $filters);
+$requestMessage = new RequestMessage($subscription->getId(), $filters);
 $relay = new Relay('wss://relay.nostr.band');
 $request = new Request($relay, $requestMessage);
 $response = $request->send();
@@ -90,7 +90,6 @@ Let's say you would like to request events from multiple relays. We can use the 
 
 ```php
 $subscription = new Subscription();
-$subscriptionId = $subscription->setId();
 // We are going to request 100 notes from 1 author from each given relay.
 $filter1 = new Filter();
 $filter1->setAuthors(
@@ -101,7 +100,7 @@ $filter1->setAuthors(
 $filter1->setKinds([1]);
 $filter1->setLimit(100);
 $filters = [$filter1];
-$requestMessage = new RequestMessage($subscriptionId, $filters);
+$requestMessage = new RequestMessage($subscription->getId(), $filters);
 // Array with all the relays we're requesting data from.
 $relays = [
     new Relay('wss://nostr.sebastix.dev'),        
