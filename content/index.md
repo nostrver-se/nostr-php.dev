@@ -57,31 +57,27 @@ use swentel\nostr\Sign\Sign;
 function send($message) {  
   try {        
     $key = new Key();
-    $private_key = $key->generatePrivateKey(); // this will generate a private key
-    $private_key_hex = $key->convertToHex($private_key);
-    $public_key = $key->getPublicKey($private_key_hex);
+    $private_key = $key->generatePrivateKey(); // this will generate a private key    
     
     $relayUrl = 'wss://relay.damus.io';
         
     $note = new Event();
     $note->setKind(1);
-    $note->addTag(['p', $public_key]);
     $note->addTag(['r', $relayUrl]);
     $note->setContent($message);
         
     $signer = new Sign();
-    $signer->signEvent($note, $private_key);        
+    $signer->signEvent($note, $private_key);         
         
-    $eventMessage = new EventMessage($note);
-        
-    $relay = new Relay($relayUrl);  
+    $relay = new Relay($relayUrl);
+    $eventMessage = new EventMessage($note);  
     $relay->setMessage($eventMessage);      
     $result = $relay->send();
         
     if ($result->isSuccess()) {
       print "The event has been sent to Nostr!\n";
     } else {
-      print 'Something went wrong: ' . $result->message() . "\n";
+      print 'Something went wrong: ' . $response->message() . "\n";
     }
   } catch (Exception $e) {
     print 'Exception error: ' . $e->getMessage() . "\n";
