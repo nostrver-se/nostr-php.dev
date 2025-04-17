@@ -42,6 +42,7 @@ export default defineConfig({
           { text: 'Relay responses', link: '/guides/relay-responses' },
           { text: 'Verify event', link: '/guides/verify-event' },
           { text: 'Manage tags on events', link: '/guides/manage-tags-on-an-event' },
+          { text: 'NIP-19 bech32 entities', link: '/guides/nip19' },
           { text: 'Asynchronous and concurrent requests', link: '/guides/asynchronous-and-concurrent-requests' }
         ]
       },
