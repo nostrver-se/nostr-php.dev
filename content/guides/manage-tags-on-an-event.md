@@ -32,13 +32,13 @@ Here is an example:
 
 Tags are set on a `Event` class with the `addTag()` and `setTags()` methods.
 
-Add a single tags to an event:
+Add single tags to an event:
 
 ```php
 $event = new Event();
 $tag = ['t', 'php']; // Hashtag php
 $event->addTag($tag);
-$tag = ['r', 'wss://relay1'];
+$tag = ['r', 'wss://relay1']; // Relay tag
 $event->addTag($tag); 
 ```
 
@@ -55,11 +55,27 @@ $tags = [
 $event->setTags($tags);
 ```
 
-## Getting tags
+## Getting all tags
 
-Getting tags from an `Event` is possible with the `getTags` method.
+Getting all tags from an `Event` is possible with the `getTags()` method.
 
 ```php
 $tags = $event->getTags();
 ```
 This will return an array with all the tags.
+
+## Getting specific tags
+
+Getting specific tags with a key from an `Event` can be done with the `getTag()` method.
+
+```php
+$hashtags = $event->getTag('t')
+```
+
+This will return a hashtags from an event.
+
+```php
+$relayTags = $event->getTag('r')
+```
+
+This will return all relay tags from an event.
