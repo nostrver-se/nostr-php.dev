@@ -6,11 +6,14 @@ Title: References
 
 PHP projects using the nostr-php library:
 * https://github.com/pj8912/nostrdev
-* https://github.com/fabianfabian/nostr-media (is using a fork for PHP8.0 compatibility)
+* https://github.com/fabianfabian/nostr-media (a forked version with PHP8.0 compatibility)
 * https://github.com/OpenAgentsInc/openagents
 * https://plugins.craftcms.com/nostr-kit
+* https://github.com/Trustroots/mediawiki-nostr-auth
+* https://github.com/Yeghro/YEGHRO_NostrLogin
+* https://github.com/kawax/laravel-nostr
 
-## Other Nostr libraries
+## Comparing other Nostr libraries
 
 Check out this page with a [comparisation matrix with Nostr libraries](/references/compare-nostr-libraries)
 
