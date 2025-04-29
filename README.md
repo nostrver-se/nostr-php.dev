@@ -1,6 +1,7 @@
 # Website for https://nostr-php.dev
 
-This documentation website is created with [VitePress](https://vitepress.dev/). 
+This documentation website is created with [VitePress](https://vitepress.dev/).
+Guido how to use Markdown with Vitepress: https://vitepress.dev/guide/markdown
 
 ## Install packages
 
