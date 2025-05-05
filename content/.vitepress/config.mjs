@@ -27,10 +27,6 @@ export default defineConfig({
         link: '/introduction'
       },
       {
-        text: 'CLI client',
-        link: '/cli-client'
-      },
-      {
         text: 'Guides',
         items: [
           { text: 'Get started', link: '/guides/get-started' },
@@ -38,10 +34,15 @@ export default defineConfig({
           { text: 'Messages to relays', link: '/guides/messages-to-relays' },
           { text: 'Request events', link: '/guides/request-events' },
           { text: 'Filters and tags on request events', link: '/guides/filters-and-tags-on-request-events' },
+          { text: 'Fetch profile metadata from pubkey', link: '/guides/fetch-profile-metadata' },
           { text: 'Publish an event', link: '/guides/publish-event' },
           { text: 'Relay responses', link: '/guides/relay-responses' },
           { text: 'Verify event', link: '/guides/verify-event' },
           { text: 'Manage tags on events', link: '/guides/manage-tags-on-an-event' },
+          { text: 'Direct messages', link: '/guides/direct-messages' },
+          { text: 'NIP-05 lookup', link: '/guides/nip05-lookup' },
+          { text: 'NIP-19 bech32 entities', link: '/guides/nip19' },
+          { text: 'NIP-44 encrypted payloads for event content', link: '/guides/nip44' },
           { text: 'Asynchronous and concurrent requests', link: '/guides/asynchronous-and-concurrent-requests' }
         ]
       },
