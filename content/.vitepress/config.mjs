@@ -9,6 +9,10 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   assetsDir: 'assets',
+  ignoreDeadLinks: [
+    '/examples',
+    '/examples/drupal'
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/nostr-php_hero-splash.png',
