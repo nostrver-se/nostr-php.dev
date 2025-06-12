@@ -1,0 +1,42 @@
+stages:
+  - build
+  - deploy
+
+build:website:
+  image: node:22
+  stage: build
+  script:
+    - npm install
+    - npm run docs:build
+  artifacts:
+    expire_in: 6 hours
+    paths:
+      - content/.vitepress/dist
+  only:
+    refs:
+      - master
+
+deploy:website:
+  image: alpine
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH == "main"'
+      when: always
+  stage: deploy
+  before_script:
+    - 'which ssh-agent || ( apk add --update openssh )'
+    - apk add --update bash
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY_TINYPC" | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    # Install rsync
+    - apk add rsync
+    # Install rsync
+    - apk add rsync
+    - rsync --version
+  script:
+      - rsync -avz --delete -e 'ssh -p 1986' ./content/.vitepress/dist/. sebastix@nostr-php.dev:/var/www/nostr-php.dev
+      - echo "Deployment ready, check https://nostr-php.dev"
+  dependencies:
+    - build:website
