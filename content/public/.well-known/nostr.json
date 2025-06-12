@@ -1,0 +1,16 @@
+{
+  "names": {
+    "_": "0dc2dcb14d89f94b8a1590e178e9fbcb2ef1cb0be175a283842f9dc54787801a",
+    "nostrphpdev": "0dc39139f680dcec080c7da9440397f86e292c0575e6cba418575aeba78440b3"
+  },
+  "relays": {
+    "0dc2dcb14d89f94b8a1590e178e9fbcb2ef1cb0be175a283842f9dc54787801a": [
+      "wss://nostr.sebastix.dev",
+      "wss://inner.sebastix.social",
+      "wss://relay.nostr.band"
+    ],
+    "0dc39139f680dcec080c7da9440397f86e292c0575e6cba418575aeba78440b3": [
+      "wss://relay.nostr.band"
+    ]
+  }
+}
