@@ -1,7 +1,7 @@
 # NIP-05 lookup
 
 With the `Nip05Helper` class you can easily request (with a simple http GET request) a given "nip05" internet identifier.
-This identifier is often part of the event kind 0 (user metadata) related to a pubkey. You can fetch this metadata with the [Profile](/guides/fetch-profile-metadata) class in the library.
+This identifier is often part of the event kind 0 (user metadata) related to a pubkey. You can fetch this metadata with the [Profile](/guides/bootstrap-profile-metadata) class in the library.
 If available, a JSON document object is returned.
 
 Here is a simple example using the Nip05Helper class.
