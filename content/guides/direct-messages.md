@@ -336,7 +336,7 @@ try {
 Always keep private keys secure and never share them
 Verify the sender's public key before trusting decrypted messages
 Use secure methods to store and handle private keys
-Remember that while message content is encrypted, metadata (sender, recipient, timestamp) remains visible. [NIP-17]() fixes this.
+Remember that while message content is encrypted, metadata (sender, recipient, timestamp) remains visible. [NIP-17](https://github.com/nostr-protocol/nips/blob/master/17.md) fixes this.
 
 ## References
 * [NIP-04 specification](https://github.com/nostr-protocol/nips/blob/master/04.md)
