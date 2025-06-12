@@ -1,4 +1,6 @@
 .idea/
+.env
+.nsite/
 node_modules/
 content/.vitepress/cache/
 content/.vitepress/dist/
