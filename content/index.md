@@ -22,28 +22,36 @@ hero:
     
 
 features:
-  - title: Generate keys
+  - icon: 🔐
+    title: Generate keys
     details: To start interacting with the Nostr network, you need a set of keys (public key + private key) as defined in NIP-01.
     link: /guides/generate-keys
-  - title: Publish events
+  - icon: 📤
+    title: Publish events
     details: Create, sign and publish Nostr events to one or more relays.
     link: /guides/publish-event
-  - title: Request events
+  - icon: 📥
+    title: Request events
     details: Request Nostr events from one or more relays.
     link: /guides/request-events
-  - title: Send private direct messages
+  - icon: 🕵🏼
+    title: Send private direct messages
     details: Use NIP-17 and NIP-44 + NIP-59 to send and receive private direct messages.
     link: /guides/direct-messages
-  - title: Handle bech32-encoded Nostr entities (NIP-19)
+  - icon: 💠
+    title: Handle bech32-encoded Nostr entities (NIP-19)
     details: Encode en decode bech32 formatted Nostr entities as described in NIP-19.
     link: /guides/nip19
-  - title: Bootstrap a profile
+  - icon: 📶
+    title: Bootstrap a profile
     details: Fetch all kinds of metadata of a given pubkey or npub.
     link: /guides/bootstrap-profile-metadata
-  - title: Handle relays responses
+  - icon: 📃
+    title: Handle relays responses
     details: When connected to a Nostr relay (with a WebSocket connection) a relay can response with different types of messages.
     link: /guides/relay-responses  
-  - title: Example snippets
+  - icon: 🔰
+    title: Example snippets
     details: Learn how to use this PHP helper library for Nostr.  
     link: /examples
 ---
