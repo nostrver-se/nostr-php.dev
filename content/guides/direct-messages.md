@@ -3,20 +3,60 @@
 ## Overview
 For direct messages the Nostr-PHP library provides:
 * [NIP-17 Private Direct messages](https://github.com/nostr-protocol/nips/blob/master/17.md)
-* [⚠️ NIP-04 Encrypted Direct Messages](https://github.com/nostr-protocol/nips/blob/master/04.md) (deprecated in favor of NIP-17).
+* ⚠️ [NIP-04 Encrypted Direct Messages](https://github.com/nostr-protocol/nips/blob/master/04.md) (deprecated in favor of NIP-17).
 
 This allows you to encrypt and decrypt direct messages between two users using their respective keys.
 
 ## Using NIP-17
 
 We will explain the following basic principles:
-* seal and gift-wrap a direct message to be sent
-* encrypt the content of a direct message to be sent
-* decrypt a (received) direct message
+* Seal and gift-wrap a direct message to be sent between from Alice to Bob
+* Encrypt the content of a direct message to be sent
+* Decrypt a (received) direct message
 
-@todo
+### Setting up
 
-![NIP-17 Private Direct Messages](/nip17-direct-messages.png)
+```php
+$key = new Key();
+$sign = new Sign();
+// Create GiftWrapService
+$giftWrapService = new GiftWrapService($key, $sign);
+// Create DirectMessage service
+$directMessage = new DirectMessage($giftWrapService, $key);
+```
+
+Setup keys for Alice and Bob.
+
+```php
+// Alice's private and public keys
+$alicePrivKey = '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
+$alicePubKey = $key->getPublicKey($alicePrivKey);
+// Bob's private and public keys
+$bobPrivKey = 'fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210';
+$bobPubKey = $key->getPublicKey($bobPrivKey);
+```
+
+Send a direct message.
+
+```php
+$messageText = "Hey Bob, this is a private message that only you can read!";
+// Send the direct message, creating gift wraps for both sender and receiver
+$result = $directMessage->sendDirectMessage(
+    $alicePrivKey,
+    $bobPubKey,
+    $messageText,
+);
+```
+
+Decrypt the message:
+
+```php 
+$decryptedEvent = DirectMessage::decryptDirectMessage(
+    $result['receiver'],  // The gift wrap to decrypt
+    $bobPrivKey,          // Bob's private key
+    true,                 // Verify the gift wrap is addressed to Bob
+);
+```
 
 ### Full example
 Here's a complete example showing both encryption and decryption:
@@ -169,6 +209,10 @@ try {
 ```
 See also [NIP-17 example in the library code](https://github.com/nostrver-se/nostr-php/blob/main/src/Examples/nip17-private-direct-messages.php).
 
+Here is a visual flow diagram showing what is happening when you send a 1 group message to Bob sends a message to two other persons:
+
+![NIP-17 Private Direct Messages](/nip17-direct-messages.png)
+
 ## Using NIP-04
 
 ::: warning NIP-04 is deprecated
@@ -177,8 +221,9 @@ See also [NIP-17 example in the library code](https://github.com/nostrver-se/nos
 
 NIP-04 defines the standard for encrypted direct messages in Nostr. It uses shared-secret encryption with a shared key derived from the sender's private key and the recipient's public key.
 
-## Basic Usage
-### Setting Up
+## Basic usage
+
+### Setting up
 First, import the Nip04 class:
 
 ```php
@@ -310,7 +355,7 @@ try {
 }
 ```
 
-### Error Handling
+### Error handling
 The encryption/decryption methods may throw exceptions in various cases:
 
 * Invalid key formats
