@@ -221,8 +221,6 @@ Here is a visual flow diagram showing what is happening when you send a 1 group 
 
 NIP-04 defines the standard for encrypted direct messages in Nostr. It uses shared-secret encryption with a shared key derived from the sender's private key and the recipient's public key.
 
-## Basic usage
-
 ### Setting up
 First, import the Nip04 class:
 
