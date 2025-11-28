@@ -69,9 +69,13 @@ $response = $request->send();
 When the message has been sent to the relay, it will return a RelayResponse object.
 
 ```php
-if ($response->isSuccess) {
-    print 'The event has been transmitted to the relay.' . PHP_EOL;
-    $eventId = $response->eventId;
+foreach ($response as $relayUrl => $relayResponses) {
+    foreach ($relayResponses as $relayResponse) {
+        if ($relayResponse->isSuccess) {
+            print 'The event has been transmitted to the relay.' . PHP_EOL;
+            $eventId = $response->eventId;
+        }
+    }
 }
 ```
 
