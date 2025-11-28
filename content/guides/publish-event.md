@@ -60,7 +60,8 @@ We will use the `EventMessage` to generate a message to be sent to the relay.
 $relay = new Relay('wss://relay.nostr.band');
 $eventMessage = new EventMessage($note);
 $relay->setMessage($eventMessage);      
-$response = $relay->send();
+$request = new Request($relay, $eventMessage);
+$response = $request->send();
 ```
 
 ## Relay response
@@ -95,12 +96,18 @@ $isValid = $note->verify();
 $relay = new Relay('wss://relay.nostr.band');
 $eventMessage = new EventMessage($note);
 $relay->setMessage($eventMessage);      
-$response = $relay->send();
+$request = new Request($relay, $eventMessage);
+$response = $request->send();
 // Handle response.
-if ($response->isSuccess) {
-    print 'The event has been transmitted to the relay.' . PHP_EOL;
-    $eventId = $response->eventId;
-    // Now we could request the event with this id.
+foreach ($response as $relayUrl => $relayResponses) {
+    foreach ($relayResponses as $relayResponse) {
+        if ($relayResponse->isSuccess) {
+          print 'The event has been transmitted to the relay.' . PHP_EOL;
+          $eventId = $relayResponse->eventId;
+          // Now we could request the event with this id.
+        }    
+    }
 }
 ```
-This snippet can also be found as an example in the library here: [`src/Examples/publish-event.php`](https://github.com/nostrver-se/nostr-php/blob/main/src/Examples/publish-event.php).
+Snippet how to publish events can also be found as an example in the library here: 
+[`src/Examples/publish-event.php`](https://github.com/nostrver-se/nostr-php/blob/main/src/Examples/publish-event.php) and [`src/Examples/publish-event-with-auth.php`](https://github.com/nostrver-se/nostr-php/blob/main/src/Examples/publish-event-with-auth.php).
