@@ -20,11 +20,17 @@ All files are generated and saved in `content/.vitepress/dist/`.
 
 ## Deployment
 
-You can use [nsite-cli](https://www.npmjs.com/package/nsite-cli) to deploy the assets as a static website on Blossom servers.
+### nsite v2
 
-The published site coupled to the [Nostr-PHP](https://njump.me/npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j) profile:
-* https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nsite.lol
-* https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nostrdeploy.com
+You can use [nsyte](https://github.com/sandwichfarm/nsyte) to deploy the `content/.vitepress/dist` directory as a static website on Blossom servers.
+
+`nsyte deploy ./content/.vitepress/dist`
+
+The nsite is now available on any nsite gateway, for example:                                                                                                                                                                      
+* https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nosto.re/
+* https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nsite.lol/
+* https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nsyte.run/
+* https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nwb.tf/
 
 Check `.gitlab-ci.yml` for deployment to https://nostr-php.dev.
 
