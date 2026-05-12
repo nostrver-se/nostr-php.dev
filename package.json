@@ -27,7 +27,6 @@
     "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "@datagouv/vitepress-plugin-matomo": "^1.0.5",
-    "nsite-cli": "^0.1.16"
+    "@datagouv/vitepress-plugin-matomo": "^1.0.5"
   }
 }

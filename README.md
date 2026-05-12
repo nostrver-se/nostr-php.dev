@@ -34,10 +34,6 @@ The nsite is now available on any nsite gateway, for example:
 
 Check `.gitlab-ci.yml` for deployment to https://nostr-php.dev.
 
-```bash
-npx nsite-cli upload content/.vitepress/dist
-```
-
 ## Development
 
 ```bash
