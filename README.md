@@ -29,8 +29,6 @@ You can use [nsyte](https://github.com/sandwichfarm/nsyte) to deploy the `conten
 The nsite is now available on any nsite gateway, for example:                                                                                                                                                                      
 * https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nosto.re/
 * https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nsite.lol/
-* https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nsyte.run/
-* https://npub1phpdev2d38u5hzs4jrsh360mevh0rjctu9669quy97wu23u8sqdqpfha0j.nwb.tf/
 
 Check `.gitlab-ci.yml` for deployment to https://nostr-php.dev.
 
